@@ -176,6 +176,8 @@ var dataInjector = function(configObj) {
 	};
 
 	var injectSocials = function() {
+
+		if(configObj.showCommunity && configObj.showCommunity == "no") return;
 		var socialLinksHtml = '';
 
 		if(configObj.twitterLink) {
@@ -219,14 +221,14 @@ var dataInjector = function(configObj) {
 	};
 
 	var loadMedia = function() {
-		setTimeout(loadVideo, 500);
-		setTimeout(loadTwitter, 500);
+		if(configObj.videoUrl) setTimeout(loadVideo, 500);
+		if(configObj.showCommunity && configObj.showCommunity == "yes") setTimeout(loadTwitter, 500);
 	};
 
 
 	var initalizeFullPage = function() {
-		var sections = ['intro', 'features', 'about', 'explore', 'issues', 'connect'];
-		var sectionsWithoutVideo = ['intro', 'features', 'about', 'issues', 'connect'];
+		var sections = ['intro', 'features', 'about', 'explore', 'issues', 'community'];
+		var sectionsWithoutVideo = ['intro', 'features', 'about', 'issues', 'community'];
 
 
 		if(!configObj.videoUrl) {
@@ -241,7 +243,21 @@ var dataInjector = function(configObj) {
 			var menuParent = document.getElementById('menu');
 			var menuChild = document.getElementById('explore-menu-item');
 			menuParent.removeChild(menuChild);
-		}		
+		}	
+
+		if(configObj.showCommunity && configObj.showCommunity == "no") {
+
+			// remove explore page
+			var parent = document.getElementById('fullpage');
+			var child = document.getElementById('community-section');
+			parent.removeChild(child);
+
+			// remove explore menu item
+			var menuParent = document.getElementById('menu');
+			var menuChild = document.getElementById('community-menu-item');
+			menuParent.removeChild(menuChild);
+
+		}	
 
 		$('#fullpage').fullpage({
 			sectionsColor: ['#FFF', '#EEE', '#FFF', '#EEE', '#FFF', '#EEE'],
@@ -264,7 +280,7 @@ var dataInjector = function(configObj) {
 		injectTitlePage();
 		injectFeatures();
 		injectAbout();
-		//injectSocials();
+		injectSocials();
 
 		loadMedia();
 

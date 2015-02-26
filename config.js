@@ -55,6 +55,9 @@ var configObj = {
 	// a link to a promotional video
 	videoUrl: "",
 
+	// yes or no to social links
+	showCommunity: "no",
+
 	// the term used in the feed you want
 	twitterSearchTerm: "appstudio",
 
