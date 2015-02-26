@@ -225,8 +225,8 @@ var dataInjector = function(configObj) {
 
 
 	var initalizeFullPage = function() {
-		var sections = ['intro', 'features', 'about', 'explore', 'connect'];
-		var sectionsWithoutVideo = ['intro', 'features', 'about', 'connect'];
+		var sections = ['intro', 'features', 'about', 'explore', 'issues', 'connect'];
+		var sectionsWithoutVideo = ['intro', 'features', 'about', 'issues', 'connect'];
 
 
 		if(!configObj.videoUrl) {
@@ -244,7 +244,7 @@ var dataInjector = function(configObj) {
 		}		
 
 		$('#fullpage').fullpage({
-			sectionsColor: ['#FFF', '#EEE', '#FFF', '#EEE', '#FFF'],
+			sectionsColor: ['#FFF', '#EEE', '#FFF', '#EEE', '#FFF', '#EEE'],
 			anchors: sections,
 			menu: '#menu',
 			scrollOverflow: true,

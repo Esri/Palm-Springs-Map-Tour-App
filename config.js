@@ -56,7 +56,7 @@ var configObj = {
 	videoUrl: "",
 
 	// the term used in the feed you want
-	twitterSearchTerm: "@utahGeological",
+	twitterSearchTerm: "appstudio",
 
 	// the id of the twitter feed. (You have to create the feed through twitter first to get this id.)
 	twitterWidgetId: "",
