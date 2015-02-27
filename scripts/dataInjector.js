@@ -45,6 +45,8 @@ var dataInjector = function(configObj) {
 			buttonsUrl += buildPlatformButtonHtml('osX-link', configObj.osXLink, 'apple.png', 'osX');
 		}
 
+		buttonsUrl += "<span class='inactive button title-button'><img src='assets/icons/apple.png'> coming soon</span>"
+
 		document.getElementById('platform-buttons').innerHTML = buttonsUrl;
 	};
 

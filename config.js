@@ -20,7 +20,7 @@ var configObj = {
 	
 	// links to the apps -- enter the ones you have platforms for.
 	androidLink: "https://play.google.com/store/apps/details?id=com.esri.palmspringsmaptour",
-	iOSLink: "#",
+	iOSLink: "",
 	webAppLink: "http://storymaps.esri.com/stories/maptour-palmsprings/",
 	windows8Link: "",
 	osXLink: "", 
@@ -47,10 +47,10 @@ var configObj = {
 	aboutParagraph: "Palm Springs, California is an American Shangri-La in a unique desert environment with endless sun, rediscovered mid-century architecture and a fun, relaxed atmosphere. Take a virtual tour of Palm Springs and discover some of the best sites in this wonderful desert oasis.",
 
 	// formal name of your organization/company
-	organizationName: "This app is built using the new ",
+	organizationName: "This app is built using the",
 	// the city and abbreviated state for your organization
-	organizationCityAndState: "AppStudio for ArcGIS",
-	organizationWebsite: "",
+	organizationCityAndState: "new",
+	organizationWebsite: "AppStudio for ArcGIS",
 
 	// a link to a promotional video
 	videoUrl: "",
