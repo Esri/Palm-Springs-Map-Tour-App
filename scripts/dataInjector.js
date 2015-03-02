@@ -9,11 +9,15 @@ var dataInjector = function(configObj) {
 
 	/* TITLE PAGE FUNCTIONS */
 
-	var buildPlatformButtonHtml = function(elementId, url, icon, title) {
+	var buildPlatformButtonHtml = function(elementId, url, icon, title, cssClass) {
 		var html = '';
 
+		if(!cssClass) {
+			cssClass = "";
+		}
+
 		// give it its id and href
-		html += '<a id="' + elementId + '" href="' + url + '" class="button title-button">';
+		html += '<a id="' + elementId + '" href="' + url + '" class="button title-button ' +  cssClass +'">';
 
 		// url
 		html += '<img src="assets/icons/' + icon + '">';
@@ -26,26 +30,50 @@ var dataInjector = function(configObj) {
 		return html;
 	};
 
+	var ua = navigator.userAgent;
+	var isAndroid = /Android/i.test(ua);
+	
+	var isIOS = /iPhone|iPad|iPod/i.test(ua);
+	var isMac = /Macintosh/i.test(ua);
+	var isWindows = /Windows/i.test(ua);
+
 	var injectPlatformLinks = function() {
 		var buttonsUrl = '';
 
 		if(configObj.androidLink) {
-			buttonsUrl += buildPlatformButtonHtml('android-link', configObj.androidLink, 'android.png', 'Android');
+			if(!isAndroid) {
+				configObj.androidLink = "#"
+			} else {
+				var androidversion = parseFloat(ua.slice(ua.indexOf("Android")+8));				
+				if(androidversion && androidversion < 4.4) {
+					setTimeout('alert("Sorry your version of Android is not supported. This apps works best on KitKat (4.4+) and above.")', 1500);
+				}
+			}
+			buttonsUrl += buildPlatformButtonHtml('android-link', configObj.androidLink, 'android.png', 'Android', isAndroid? "":"fade");
 		}
 		if(configObj.iOSLink) {
-			buttonsUrl += buildPlatformButtonHtml('iOS-link', configObj.iOSLink, 'apple.png', 'iOS');
+			if(!isIOS) {
+				configObj.iOSLink = "#"
+			}
+			buttonsUrl += buildPlatformButtonHtml('iOS-link', configObj.iOSLink, 'apple.png', 'iOS', isIOS? "": "fade");
 		}
 		if(configObj.webAppLink) {
-			buttonsUrl += buildPlatformButtonHtml('web-app-link', configObj.webAppLink, 'web.png', 'Web');
+			buttonsUrl += buildPlatformButtonHtml('web-app-link', configObj.webAppLink, 'web.png', 'Web',"");
 		}
-		if(configObj.windows8Link) {
-			buttonsUrl += buildPlatformButtonHtml('windows-8-link', configObj.windows8Link, 'windows.png', 'Windows 8');
+		if(configObj.windows8Link && !isIOS && !isAndroid) {
+			if(!isWindows) {
+				configObj.windows8Link = "#"
+			}
+			buttonsUrl += buildPlatformButtonHtml('windows-8-link', configObj.windows8Link, 'windows.png', 'Windows', isWindows? "": "fade");
 		}
-		if(configObj.osXLink) {
-			buttonsUrl += buildPlatformButtonHtml('osX-link', configObj.osXLink, 'apple.png', 'osX');
+		if(configObj.osXLink && !isAndroid) {
+			if(!isMac) {
+				configObj.osXLink = "#"
+			}
+			buttonsUrl += buildPlatformButtonHtml('osX-link', configObj.osXLink, 'apple.png', 'Mac', isMac?"":"fade");
 		}
 
-		buttonsUrl += "<span class='inactive button title-button'><img src='assets/icons/apple.png'> coming soon</span>"
+		buttonsUrl += "<span class='button title-button fade'><img src='assets/icons/apple.png'> coming soon</span>"
 
 		document.getElementById('platform-buttons').innerHTML = buttonsUrl;
 	};
