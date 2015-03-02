@@ -26,7 +26,7 @@ var configObj = {
 	osXLink: "", 
     
 	// Features page subtitle
-	featuresBlurb: "Use this fun app to discover 21 places to go in Palm Springs with photos and captions linked to an interactive map.",
+	featuresBlurb: "Use this fun app to discover 21 places to go in Palm Springs.",
 	// Features page screenshots (in a carousel)
 	screenshots: [
 		"assets/screenshots/1.jpg",
