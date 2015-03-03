@@ -1,6 +1,6 @@
 # Palm Springs Map Tour App Support Site
 
-Support site for the Palm Springs Map Tour app. Report your issues here and find answers and or updates on fixes.
+Support site for the Palm Springs Map Tour app. Find code for the landing page, report your issues with the app or the website here and find answers/updates on fixes.
 
 ![App](https://raw.githubusercontent.com/Esri/Palm-Springs-Map-Tour-App/gh-pages/Palm-Springs-Map-Tour-App.png)​
 
@@ -8,6 +8,8 @@ To download the app and find other info visit http://esri.github.io/Palm-Springs
 
 This app was built using the "map tour" template in the new AppStudio of ArcGIS. Learn more about Appstudio for ArcGIS here : http://appstudio.arcgis.com (Coming soon!)
 
+## Coming Soon
+Source code for the native app will be available soon.
 
 ## Issues
 
