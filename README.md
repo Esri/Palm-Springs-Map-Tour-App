@@ -1,4 +1,4 @@
-# Palm Springs Map Tour App
+# Palm Springs Map Tour App Support Site
 
 Support site for the Palm Springs Map Tour app. Report your issues here and find answers and or updates on fixes.
 
@@ -14,7 +14,7 @@ This app was built using the "map tour" template in the new AppStudio of ArcGIS.
 Find a bug or want to request a new feature?  Please let us know by submitting an issue.
 
 ## Licensing
-Copyright 2013 Esri
+Copyright 2015 Esri
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
