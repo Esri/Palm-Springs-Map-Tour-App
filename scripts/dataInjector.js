@@ -73,7 +73,7 @@ var dataInjector = function(configObj) {
 			buttonsUrl += buildPlatformButtonHtml('osX-link', configObj.osXLink, 'apple.png', 'Mac', isMac?"":"fade");
 		}
 
-		buttonsUrl += "<span class='button title-button fade'><img src='assets/icons/apple.png'> coming soon</span>"
+		//buttonsUrl += "<span class='button title-button fade'><img src='assets/icons/apple.png'> coming soon</span>"
 
 		document.getElementById('platform-buttons').innerHTML = buttonsUrl;
 	};

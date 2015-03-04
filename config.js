@@ -20,7 +20,7 @@ var configObj = {
 	
 	// links to the apps -- enter the ones you have platforms for.
 	androidLink: "https://play.google.com/store/apps/details?id=com.esri.palmspringsmaptour",
-	iOSLink: "",
+	iOSLink: "https://itunes.apple.com/us/app/palm-springs-map-tour/id971338647?ls=1&mt=8",
 	webAppLink: "http://storymaps.esri.com/stories/maptour-palmsprings/",
 	windows8Link: "",
 	osXLink: "", 
