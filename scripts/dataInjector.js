@@ -42,18 +42,18 @@ var dataInjector = function(configObj) {
 
 		if(configObj.androidLink) {
 			if(!isAndroid) {
-				configObj.androidLink = "#"
+				//configObj.androidLink = "#"
 			} else {
 				var androidversion = parseFloat(ua.slice(ua.indexOf("Android")+8));				
-				if(androidversion && androidversion < 4.4) {
-					setTimeout('alert("Sorry your version of Android is not supported. This apps works best on KitKat (4.4+) and above.")', 1500);
+				if(androidversion && androidversion < 4.2) {
+					setTimeout('alert("Sorry your version of Android is not supported. This apps works best on Jelly Bean (4.2+) and above.")', 1500);
 				}
 			}
 			buttonsUrl += buildPlatformButtonHtml('android-link', configObj.androidLink, 'android.png', 'Android', isAndroid? "":"fade");
 		}
 		if(configObj.iOSLink) {
 			if(!isIOS) {
-				configObj.iOSLink = "#"
+				//configObj.iOSLink = "#"
 			}
 			buttonsUrl += buildPlatformButtonHtml('iOS-link', configObj.iOSLink, 'apple.png', 'iOS', isIOS? "": "fade");
 		}
