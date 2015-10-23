@@ -33,4 +33,4 @@ limitations under the License.
 A copy of the license is available in the repository's [license.txt]( https://raw.githubusercontent.com/Esri/Palm-Springs-Map-Tour-App/gh-pages/license.txt) file.
 
 [](Esri Tags: ios android appstore googleplay appstudio) 
-[](Esri Language: JavaScript QML)
+[](Esri Language: AppStudio)
