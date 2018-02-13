@@ -13,18 +13,18 @@ var configObj = {
 	// what type of device you want to show your featured screenshot in.
 	// valid answers are 'phone', 'tablet', 'laptop', and 'desktop'.
 	shimDevice: 'phone',
-	
+
 	// whether you want the device to be horizontal or vertical.
-	// valid answers are 'portrait' and 'landscape' 
-	shimOrientation: 'portrait', 
-	
+	// valid answers are 'portrait' and 'landscape'
+	shimOrientation: 'portrait',
+
 	// links to the apps -- enter the ones you have platforms for.
 	androidLink: "https://play.google.com/store/apps/details?id=com.esri.palmspringsmaptour",
 	iOSLink: "https://itunes.apple.com/us/app/palm-springs-map-tour/id971338647?ls=1&mt=8",
-	webAppLink: "http://storymaps.esri.com/stories/maptour-palmsprings/",
+	webAppLink: "https://storymaps.esri.com/stories/maptour-palmsprings/",
 	windows8Link: "",
-	osXLink: "", 
-    
+	osXLink: "",
+
 	// Features page subtitle
 	featuresBlurb: "Use this fun app to discover 21 places to go in Palm Springs.",
 	// Features page screenshots (in a carousel)
@@ -34,12 +34,12 @@ var configObj = {
 		"assets/screenshots/3.jpg",
 		"assets/screenshots/4.jpg"
 	],
-	
+
 	// bullet-point of features your app has
-	features: [		
+	features: [
 		"Interactive Map",
 		"Photos and Captions",
-		"Simple & Easy to use",				
+		"Simple & Easy to use",
 		"Runs on any device"
 	],
 
@@ -65,7 +65,7 @@ var configObj = {
 	twitterWidgetId: "",
 
 	facebookLink: "",
-	twitterLink: "",	
+	twitterLink: "",
 	blogLink: "",
 
 
@@ -74,11 +74,3 @@ var configObj = {
 	primaryBackgroundColor: "FFF",
 	secondaryBackgroundColor: "EEE"
 };
-
-
-
-
-	
-
-
-
